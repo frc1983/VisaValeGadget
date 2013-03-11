@@ -1,0 +1,25 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+        <meta http-equiv="Content-Type" content="text/html; charset=Unicode" />
+        <title>Consulta VisaVale</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="functions.js"></script>
+    </head>
+	
+    <body>
+		<div id="title">Consulta Visa Vale</div>
+		<div id="cadastroCartao">
+			<label>Número do Cartão</label>
+			<input type="text" name="numCartao" id="numCartao" maxlength="16" />
+			<input type="button" onclick="javascript: WriteToFile()" value="Salvar" />
+		</div>
+		<div id="gadgetContent">
+		
+		</div>
+		<div>
+			<input type="button" onclick="javascript: readFile()" value="Refresh" />
+		</div>
+    </body>	
+</html>

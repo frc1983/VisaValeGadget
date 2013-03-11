@@ -1,0 +1,21 @@
+body
+{
+	margin: 0;
+	width: 230px;
+	height: 155px;
+	font-family: verdana;
+	font-size: 12px;
+}
+#gadgetContent
+{
+	margin-top: 20px;
+	width: 230px;
+	vertical-align: middle;
+	text-align: left;
+	overflow: hidden;
+}
+
+div#title {
+	font-size: 16px;
+	font-weight: bold;
+}
