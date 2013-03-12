@@ -50,18 +50,18 @@ function readFile(){
 }
 
 function processStateChange(){
-  statusDiv = document.getElementById("gadgetContent");
-  if (req.readyState == 0){ statusDiv.innerHTML = "UNINITIALIZED"; }
-  if (req.readyState == 1){ statusDiv.innerHTML = "LOADING"; }
-  if (req.readyState == 2){ statusDiv.innerHTML = "LOADED"; }
-  if (req.readyState == 3){ statusDiv.innerHTML = "INTERACTIVE"; }
+  statusDiv = $("#gadgetContent");
+  if (req.readyState == 0){ statusDiv.html("UNINITIALIZED"); }
+  if (req.readyState == 1){ statusDiv.html("LOADING"); }
+  if (req.readyState == 2){ statusDiv.html("LOADED"); }
+  if (req.readyState == 3){ statusDiv.html("INTERACTIVE"); }
   if (req.readyState == 4){
 	parseHTML(req.responseText, statusDiv);
   }
 }
 
 function parseHTML(text, statusDiv){
-	statusDiv.innerHTML = text;
+	statusDiv.html(text);
 	var frase = "";
 	$("table:first tr").map(function( index ) {
 		if(index < 2){
@@ -75,5 +75,5 @@ function parseHTML(text, statusDiv){
 		frase += ("<b>" + row.find(':nth-child(1)').text() + "</b><br /> " + row.find(':nth-child(2)').text()) + "<br />";
 	}).get();
 	
-	statusDiv.innerHTML = frase;
+	statusDiv.html(frase);
 }
