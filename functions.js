@@ -26,6 +26,7 @@ GADGET_APP = {
 		GADGET_APP.containers.numCartao      = $("#numCartao");
 		GADGET_APP.containers.btnSave        = $("#btnSave");
 		GADGET_APP.containers.btnRefresh     = $("#btnRefresh");
+		GADGET_APP.containers.loader     	 = $("#loader");
 	},
 	
 	setOnClick: function() {
@@ -76,12 +77,19 @@ GADGET_APP = {
 	},
 
 	processStateChange: function() {
-		if (req.readyState == 0){ GADGET_APP.containers.gadgetContent.html("UNINITIALIZED"); }
-		if (req.readyState == 1){ GADGET_APP.containers.gadgetContent.html("LOADING"); }
-		if (req.readyState == 2){ GADGET_APP.containers.gadgetContent.html("LOADED"); }
-		if (req.readyState == 3){ GADGET_APP.containers.gadgetContent.html("LOADING"); }
+		if (req.readyState == 0){  }
+		if (req.readyState == 1){ 
+			GADGET_APP.containers.loader.show(); 
+			GADGET_APP.containers.gadgetContent.hide();
+		}
+		if (req.readyState == 2){  }
+		if (req.readyState == 3){ 
+			GADGET_APP.containers.loader.show(); 
+		}
 		if (req.readyState == 4){
 			GADGET_APP.parseHTML(req.responseText, GADGET_APP.containers.gadgetContent);
+			GADGET_APP.containers.loader.hide();
+			GADGET_APP.containers.gadgetContent.show();
 		}
 	},
 
