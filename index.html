@@ -1,6 +1,5 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-		<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
         <meta http-equiv="Content-Type" content="text/html; charset=Unicode" />
         <title>Consulta VisaVale</title>
 		<link href="style.css" rel="stylesheet" type="text/css" />
@@ -13,13 +12,13 @@
 		<div id="cadastroCartao">
 			<label>Número do Cartão</label>
 			<input type="text" name="numCartao" id="numCartao" maxlength="16" />
-			<input type="button" onclick="javascript: WriteToFile()" value="Salvar" />
+			<input type="button" id="btnSave" value="Salvar" />
 		</div>
 		<div id="gadgetContent">
 		
 		</div>
 		<div>
-			<input type="button" onclick="javascript: readFile()" value="Refresh" />
+			<input type="button" id="btnRefresh" value="Refresh" />
 		</div>
     </body>	
 </html>
