@@ -1,21 +1,65 @@
-body
-{
+body {
 	margin: 0;
-	width: 230px;
-	height: 155px;
+	width: 250px;
+	height: 240px;
 	font-family: verdana;
-	font-size: 12px;
+	font-size: 16px;
+	font-family: 'Segoe UI';
 }
-#gadgetContent
-{
-	margin-top: 20px;
-	width: 230px;
-	vertical-align: middle;
+
+#gadgetContent {
 	text-align: left;
 	overflow: hidden;
+	margin: 0 0 20px 10px;
+}
+
+#gadgetContent b{
+	color: green;
+}
+
+input {
+	height: 30px;
+	border: 1px solid green;
+	background: white;
 }
 
 div#title {
-	font-size: 16px;
+	font-size: 25px;
 	font-weight: bold;
+	color: white;
+	background: green;
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+
+#numCartao {
+	height: 30px;
+	width: 155px;
+	padding: 4px;
+	text-align: center;
+	float: left;
+}
+
+#btnSave {
+	height: 30px;
+	width: 70px;
+	cursor: pointer;
+	float: right;
+	margin: 0 10px 0 0;
+}
+
+#btnRefresh {
+	height: 30px;
+	width: 70px;
+	cursor: pointer;
+	float: right;
+	margin: 0 10px 0 0;
+}
+
+#loader {
+	text-align: center;
+}
+
+#cadastroCartao {
+	margin: 0 0 20px 10px;
 }

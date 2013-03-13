@@ -18,6 +18,8 @@ GADGET_APP = {
 	init: function(){
         GADGET_APP.getContaineirs();
 		GADGET_APP.setOnClick();
+		GADGET_APP.containers.loader.hide();
+		GADGET_APP.containers.btnRefresh.hide();
 	},
 	
 	getContaineirs: function() {
@@ -63,7 +65,8 @@ GADGET_APP = {
 
 		s = (ts.AtEndOfStream) ? "" : ts.ReadLine();
 		if (s != "") {
-			GADGET_APP.containers.cadastroCartao.hide();		
+			GADGET_APP.containers.cadastroCartao.hide();
+			GADGET_APP.containers.btnRefresh.show();
 							
 			req = new ActiveXObject("Msxml2.XMLHTTP");
 			if (req) {		
