@@ -5,12 +5,18 @@
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src="functions.js"></script>
+		<script src="cufon-yui.js" type="text/javascript"></script>
+		<script src="segoe-wp_400-segoe-wp_800-segoe-wp_700.font.js" type="text/javascript"></script>
+		<script type="text/javascript">Cufon.now();</script>
+		<script type="text/javascript">
+            Cufon.replace('body', { fontFamily: 'segoe-wp' });
+		</script>
     </head>
 	
     <body>
-		<div id="title">Consulta Visa Vale</div>
+		<div id="title">consulta visa vale</div>
 		<div id="cadastroCartao">
-			<label>Número do Cartão</label>
+			<label>número do cartão</label>
 			<input type="text" name="numCartao" id="numCartao" maxlength="16" />
 			<input type="button" id="btnSave" value="Salvar" />
 		</div>
