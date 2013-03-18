@@ -14,20 +14,22 @@ body {
 }
 
 #gadgetContent b{
-	color: green;
+	color: #008c00;
 }
 
 input {
 	height: 30px;
-	border: 1px solid green;
-	background: white;
+	border: 1px solid #008c00;
+	background: #fff;
 }
 
 div#title {
-	font-size: 25px;
+	font-size: 20px;
+	line-height: 20px;
 	font-weight: bold;
-	color: white;
-	background: green;
+	margin-bottom: 10px;
+	color: #fff;
+	background: #008c00;
 	padding: 10px;
 }
 
@@ -37,6 +39,7 @@ div#title {
 	padding: 4px;
 	text-align: center;
 	float: left;
+	font-family: "OCR A Std";
 }
 
 #btnSave {
@@ -45,6 +48,7 @@ div#title {
 	cursor: pointer;
 	float: right;
 	margin: 0 10px 0 0;
+	color: #008c00;
 }
 
 #btnRefresh {
@@ -53,6 +57,7 @@ div#title {
 	cursor: pointer;
 	float: right;
 	margin: 0 10px 0 0;
+	color: #008c00;
 }
 
 #loader {
