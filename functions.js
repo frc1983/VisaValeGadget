@@ -21,6 +21,7 @@ GADGET_APP = {
 		GADGET_APP.containers.loader.hide();
 		GADGET_APP.containers.btnRefresh.hide();
 		GADGET_APP.containers.btnEdit.hide();
+		GADGET_APP.containers.smile.hide();
 	},
 	
 	getContaineirs: function() {
@@ -31,6 +32,7 @@ GADGET_APP = {
 		GADGET_APP.containers.btnRefresh     = $("#btnRefresh");
 		GADGET_APP.containers.btnEdit     	 = $("#btnEdit");
 		GADGET_APP.containers.loader     	 = $("#loader");
+		GADGET_APP.containers.smile     	 = $("#smile");
 	},
 	
 	setOnClick: function() {
@@ -132,6 +134,19 @@ GADGET_APP = {
 		$("table:last tr").map(function(index) {
 			var row = $(this);			
 			frase += ("<b>" + row.find(':nth-child(1)').text() + "</b><br /> " + row.find(':nth-child(2)').text()) + "<br />";
+			
+			GADGET_APP.containers.smile.show();
+			var valorAtual = parseFloat(row.find(':nth-child(2)').text().replace('R$ ', '').replace(',', '.'));
+
+			if(valorAtual > 150.00) {
+				GADGET_APP.containers.smile.html('<img src="happy.png" />');
+			}	
+			else if(valorAtual < 150.00 && valorAtual > 50.00) {
+				GADGET_APP.containers.smile.html('<img src="angry.png" />');
+			}
+			else {
+				GADGET_APP.containers.smile.html('<img src="sad.png" />');
+			}				
 		}).get();
 		
 		statusDiv.html(frase);
