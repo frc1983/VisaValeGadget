@@ -28,6 +28,7 @@ GADGET_APP = {
 		GADGET_APP.containers.numCartao      = $("#numCartao");
 		GADGET_APP.containers.btnSave        = $("#btnSave");
 		GADGET_APP.containers.btnRefresh     = $("#btnRefresh");
+		GADGET_APP.containers.btnEdit     	 = $("#btnEdit");
 		GADGET_APP.containers.loader     	 = $("#loader");
 	},
 	
@@ -37,6 +38,9 @@ GADGET_APP = {
 		});
 		GADGET_APP.containers.btnRefresh.click(function() {
 			GADGET_APP.readFile();
+		});
+		GADGET_APP.containers.btnEdit.click(function() {
+			GADGET_APP.editFile();
 		});
 	},
 	
@@ -67,7 +71,8 @@ GADGET_APP = {
 		if (s != "") {
 			GADGET_APP.containers.cadastroCartao.hide();
 			GADGET_APP.containers.btnRefresh.show();
-							
+			GADGET_APP.containers.btnEdit.show();
+			
 			req = new ActiveXObject("Msxml2.XMLHTTP");
 			if (req) {		
 				req.onreadystatechange = GADGET_APP.processStateChange;
@@ -76,6 +81,23 @@ GADGET_APP = {
 			}
 		} else {
 			GADGET_APP.containers.cadastroCartao.show();		
+		}
+	},
+	
+	editFile: function() {
+		var rand = Math.ceil(Math.random()*100000);
+		var fso, f1;
+		
+		fso = new ActiveXObject(GADGET_APP.FILE.wtf);
+		ts = fso.OpenTextFile(GADGET_APP.FILE.path, 1, false, 0);
+
+		s = (ts.AtEndOfStream) ? "" : ts.ReadLine();
+		if (s != "") {
+			GADGET_APP.containers.cadastroCartao.show();
+			GADGET_APP.containers.btnRefresh.hide();	
+			GADGET_APP.containers.btnEdit.hide();
+			GADGET_APP.containers.gadgetContent.hide();
+			GADGET_APP.containers.numCartao.val(s);
 		}
 	},
 
