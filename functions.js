@@ -47,7 +47,7 @@ GADGET_APP = {
 	
 	autoRefresh: function() {
 		var d = new Date();
-		if (d.getHours() == "12") 
+		if (d.getHours() == "13") 
 			GADGET_APP.readFile();
 	},
 
