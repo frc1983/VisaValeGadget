@@ -8,7 +8,7 @@ Gadget para Windows 7 para consulta de VisaVale.
 
 Instalação:
 
-- Baixar o self-extract da sua versão de Windows 7
+- Baixar o self-extract da sua versão de Windows 7 em http://dl.dropbox.com/u/1476888/VisaVale.Gadget.exe
 - Extrair para a pasta C:\Program Files\Windows Sidebar\Gadgets (Default)
 
 Para abrir o Gadget:
