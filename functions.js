@@ -69,6 +69,8 @@ GADGET_APP = {
 		
 		fso = new ActiveXObject(GADGET_APP.FILE.wtf);
 		ts = fso.OpenTextFile(GADGET_APP.FILE.path, 1, false, 0);
+		
+		GADGET_APP.containers.smile.hide();
 
 		s = (ts.AtEndOfStream) ? "" : ts.ReadLine();
 		if (s != "") {
