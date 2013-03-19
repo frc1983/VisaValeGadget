@@ -10,7 +10,6 @@ Instalação:
 
 - Baixar o self-extract da sua versão de Windows 7
 - Extrair para a pasta C:\Program Files\Windows Sidebar\Gadgets (Default)
-- 
 
 Para abrir o Gadget:
 
