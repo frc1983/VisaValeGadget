@@ -20,6 +20,7 @@ GADGET_APP = {
 		GADGET_APP.setOnClick();
 		GADGET_APP.containers.loader.hide();
 		GADGET_APP.containers.btnRefresh.hide();
+		GADGET_APP.containers.btnEdit.hide();
 	},
 	
 	getContaineirs: function() {
