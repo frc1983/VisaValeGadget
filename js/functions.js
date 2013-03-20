@@ -143,13 +143,13 @@ GADGET_APP = {
 			var valorAtual = parseFloat(row.find(':nth-child(2)').text().replace('R$ ', '').replace(',', '.'));
 
 			if(valorAtual > 150.00) {
-				GADGET_APP.containers.smile.html('<img src="happy.png" />');
+				GADGET_APP.containers.smile.html('<img src="../images/happy.png" />');
 			}	
 			else if(valorAtual < 150.00 && valorAtual > 50.00) {
-				GADGET_APP.containers.smile.html('<img src="angry.png" />');
+				GADGET_APP.containers.smile.html('<img src="../images/angry.png" />');
 			}
 			else {
-				GADGET_APP.containers.smile.html('<img src="sad.png" />');
+				GADGET_APP.containers.smile.html('<img src="../images/sad.png" />');
 			}				
 		}).get();
 		
